@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  height: 100%;
+  background: linear-gradient(135deg, #000000, #000000); /* Matches about.css background */
+  color: #ffffff; /* White text as default */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #000000; /* Solid black background */
+  color: #FDC830; /* Yellow text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FDC830; /* Yellow links */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* White on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links a.active {
+  color: #f67280; /* Highlight active link with a pinkish color */
+}
+
+/* Section General */
+.section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* Blog Section */
+.blog {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  flex-direction: column;
+  background: linear-gradient(135deg, #FDC830, #000000); /* Yellow-dark gradient */
+  padding: 40px 20px; /* Reduced padding to lighten the design */
+  color: #ffffff; /* White text for blog content */
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4); /* Reduced shadow for a lighter look */
+  min-height: 100vh; /* Full viewport height */
+  text-align: center;
+  animation: fadeIn 1.5s ease-out; /* Fade-in for the entire blog section */
+}
+
+.blog h2 {
+  font-size: 3rem;
+  color: #000000; /* Yellow for titles */
+  margin-bottom: 20px;
+  animation: slideDown 1s ease-out; /* Slide-down animation */
+}
+
+.blog .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Reduced gap to make it feel lighter */
+  width: 100%;
+  max-width: 900px; /* Restricted max-width for readability */
+  animation: fadeIn 1.5s ease-out; /* Fade-in effect */
+}
+
+.blog .post {
+  background: #000000; /* Dark card for each post */
+  padding: 20px;
+  border-left: 4px solid #FDC830; /* Yellow accent */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  border-radius: 5px; /* Rounded corners for a modern feel */
+  width: 100%;
+  text-align: left; /* Align text to the left */
+  margin-bottom: 30px; /* Space between posts */
+  animation: scaleUp 0.5s ease-out; /* Scale-up effect on load */
+}
+
+.blog .post h2 {
+  font-size: 2rem;
+  color: #FDC830; /* Yellow for titles */
+  margin-bottom: 15px;
+  animation: slideLeft 0.5s ease-out; /* Slide-in effect for title */
+}
+
+.blog .post p {
+  font-size: 1.1rem;
+  color: #f2f2f2; /* Light grey for content */
+  line-height: 1.8;
+  animation: fadeIn 1.5s ease-out; /* Fade-in effect for content */
+}
+
+.blog .post .extra-content {
+  color: #f2f2f2; /* Light grey for extra content */
+  margin-top: 20px;
+}
+
+.blog .post .read-more-btn {
+  background-color: #00d1b2; /* Teal button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.blog .post .read-more-btn:hover {
+  background-color: #f67280; /* Pinkish color on hover */
+}
+
+/* Footer */
+.footer {
+  background: #000000; /* Solid black background */
+  padding: 20px;
+  text-align: center;
+  color: #FDC830; /* Yellow text */
+  font-size: 0.9rem;
+  animation: fadeIn 1.5s ease-out; /* Fade-in effect for footer */
+}
+
+.footer a {
+  color: #ffffff; /* White links */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #FDC830; /* Yellow on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #000000, #000000); /* Dark gradient background */
+  color: #ffffff;
+  height: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #000000;
+  color: #FDC830;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FDC830;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.nav-links a.active {
+  color: #f67280;
+}
+
+/* Projects Section */
+.projects {
+  padding: 60px 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #FDC830, #000000); /* Yellow to dark gradient */
+  animation: fadeIn 1.5s ease-out; /* Fade-in effect */
+}
+
+.projects h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  background: #000000;
+  background-clip: text;
+  color: transparent;
+  animation: slideDown 1s ease-out; /* Slide-down animation */
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Center the projects */
+  gap: 20px; /* Add space between the project boxes */
+  padding: 0;
+  animation: fadeIn 1s ease-out; /* Fade-in for the container */
+}
+
+/* Individual Project */
+.project {
+  background-color: #000000;
+  padding: 15px;
+  width: 300px; /* Fixed width for all projects */
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 10px;
+  animation: scaleUp 0.5s ease-out; /* Initial scale-up animation */
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 100%; /* Matches the container width */
+  height: 200px; /* Fixed height for uniform image size */
+  object-fit: contain; /* Ensures the entire image is visible without distortion */
+  border-radius: 10px;
+  background-color: #000; /* Adds a background color to fill empty spaces */
+  animation: fadeIn 1.5s ease-out; /* Fade-in for the images */
+}
+
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #FDC830;
+  animation: slideLeft 0.5s ease-out; /* Slide-in from left */
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #f2f2f2;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-out; /* Fade-in for the paragraph */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project {
+      width: calc(50% - 20px); /* 2 projects per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project {
+      width: 100%; /* 1 project per row on mobile */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+      transform: translateX(-20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}

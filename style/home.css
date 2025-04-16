@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    background: linear-gradient(1deg,#000000, #FDC830, #000000); /* Yellow-dark gradient */
+}
+  
+/* Section General */
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+  
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Ensure text is aligned to the left */
+    padding-left: 40px; /* Add some padding from the left */
+}
+  
+/* Hero Image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Move image to the right */
+    width: 50%; /* Set width to 50% */
+    height: 120%;
+    z-index: -1;
+    filter: brightness(0.5); /* Slight blur to blend the white part */
+    object-fit: cover;
+    animation: scaleImage 15s infinite alternate;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+/* Hero Text (No container) */
+.hero h1, .hero p, .hero .btn {
+    z-index: 1;
+    color: #ffffff;
+    padding: 20px;
+    max-width: 50%; /* Adjust text width */
+    text-align: left; /* Align text to the left */
+}
+  
+.hero h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px; /* More spacing between heading and paragraph */
+    font-weight: bold; /* Bold heading */
+    text-transform: uppercase; /* Make heading all caps */
+    animation: fadeIn 1s ease-in-out;
+}
+  
+.hero .highlight {
+    color: #000000;
+}
+  
+.hero p {
+    font-size: 1.8em;
+    margin-top: 15px;
+    font-weight: 500; /* Medium font weight */
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+}
+  
+/* Button Styling */
+.hero .btn {
+    background: #FDC830;
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold; /* Bold button text */
+    letter-spacing: 1px; /* Space out the letters for a sleek look */
+    text-decoration: none; /* Remove underline */
+}
+  
+.hero .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(253, 200, 48, 0.4);
+}
+  
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scaleImage {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+

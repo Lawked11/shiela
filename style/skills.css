@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body, html {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    height: 100%;
+    background: linear-gradient(135deg, #1c1c1c, #333333); /* Dark gradient background */
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000000;
+    color: #FDC830;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hide/show */
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+  
+.nav-links li {
+    margin-left: 20px;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: #FDC830;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+  
+.nav-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+  
+.nav-links a.active {
+    color: #f67280;
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #FDC830, #000000); /* Yellow to dark gradient */
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+.skills h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    background: #000 ;
+    background-clip: text;
+    color: transparent;
+    animation: textClip 2s ease-in-out; /* Text clipping animation */
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    animation: slideUp 1s ease-out; /* Slide-up animation */
+}
+
+/* Skill Box */
+.skill {
+    width: 80%;
+    max-width: 600px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out; /* Fade-in animation for skill boxes */
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    animation: slideLeft 0.5s ease-out; /* Slide-in from left */
+}
+
+/* Skill Bar Container */
+.skill-bar-container {
+    width: 100%;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+.skill-bar {
+    height: 12px;
+    background-color: #FDC830;
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out;
+    animation: fillBar 2s ease-out; /* Animation for skill bar filling */
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #f2f2f2;
+    animation: fadeIn 1.5s ease-out; /* Fade-in for paragraphs */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        gap: 20px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fillBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes textClip {
+    0% {
+        background-size: 0% 100%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}

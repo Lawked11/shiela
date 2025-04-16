@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #1c1c1c, #000000); /* Matches about.css background */
+  color: #ffffff; /* White text as default */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #000000; /* Solid black background */
+  color: #FDC830; /* Yellow text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FDC830; /* Yellow links */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* White on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links a.active {
+  color: #f67280; /* Highlight active link with a pinkish color */
+}
+
+/* Section General */
+.section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact {
+  background: linear-gradient(135deg, #FDC830, #000000); /* Yellow-dark gradient */
+  padding: 80px 40px; /* Spacious padding */
+  color: #000000; /* White text for contact section */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Adds depth */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact h2 {
+  font-size: 2.5rem; /* Larger font for heading */
+  margin-bottom: 40px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased space between form elements */
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Increased font size */
+  color: #000000; /* Dark text for readability */
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border-color: #FDC830; /* Yellow border on focus */
+}
+
+.contact button {
+  padding: 12px;
+  background: #000000; /* Yellow button */
+  color: #FDC830; /* Black text */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Larger font size for button */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+  background: #FDC830; /* White on hover */
+  color: #000000; /* Black text on hover */
+  
+}
+
+/* Social Media Links */
+.social-links {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-links a {
+  display: inline-block;
+}
+
+.social-links .facebook i {
+  font-size: 40px; /* Size of the Facebook icon */
+  color: #1877F2; /* Facebook Blue */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links .instagram i {
+  font-size: 40px; /* Size of the Instagram icon */
+  color: transparent; /* Make the text transparent to show the gradient */
+  background: linear-gradient(45deg, #F58529, #D7007F, #833AB4); /* Instagram gradient */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links i:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.social-links .facebook i:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.social-links .instagram i:hover {
+  background: linear-gradient(45deg, #F58529, #D7007F, #833AB4); /* Instagram gradient on hover */
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* Footer */
+.footer {
+  background: #000000; /* Solid black background */
+  padding: 20px;
+  text-align: center;
+  color: #FDC830; /* Yellow text */
+  font-size: 1.2rem; /* Larger text for footer */
+}
+
+.footer a {
+  color: #ffffff; /* White links */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #FDC830; /* Yellow on hover */
+}
+
+/* Message Display */
+.message {
+  background-color: #000000; /* Yellow background */
+  color: #ffffff; /* Black text */
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+  text-align: center;
+}
+
+/* Add animations or transitions if needed */
+.message.show {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
